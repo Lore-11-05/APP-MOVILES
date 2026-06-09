@@ -1,0 +1,17 @@
+<div class="contenedor">
+  <!-- Tarjeta 1 -->
+  <app-tarjeta 
+    [titulo]="'Obj'"
+    [contenido]="'Nombre del contenido de la tarea de la clase: Obj'"
+    [boton]="'Aceptar Obj'"
+    (myvaroutput)="eventoRecibido($event)">
+  </app-tarjeta>
+
+  <!-- Tarjeta 2 -->
+  <app-tarjeta 
+    [titulo]="'Obj2'"
+    [contenido]="'Nombre del contenido de la tarea de la clase: Obj2'"
+    [boton]="'Aceptar Obj2'"
+    (myvaroutput)="eventoRecibido($event)">
+  </app-tarjeta>
+</div>

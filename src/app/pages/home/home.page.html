@@ -1,0 +1,36 @@
+<div style="max-width: 500px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
+  <h1 style="text-align: center; color: #333;">TaskList v2</h1>
+
+  <!-- Mensaje de error -->
+  <div *ngIf="mensajeError" style="background-color: #ffebee; color: #c62828; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+    {{ mensajeError }}
+  </div>
+
+  <!-- Input y botón -->
+  <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+    <input 
+      type="text"
+      [(ngModel)]="newTaskStr"
+      placeholder="Ingresa una nueva tarea..."
+      style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+    <button (click)="task()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+      ➕ Agregar
+    </button>
+  </div>
+
+  <!-- Lista de tareas -->
+  <ul style="list-style: none; padding: 0;">
+    <li *ngFor="let tarea of tareas" style="display: flex; align-items: center; gap: 10px; padding: 10px; border-bottom: 1px solid #eee;">
+      <input type="checkbox" [checked]="tarea.completada" (change)="toggleCompletada(tarea.id)">
+      <span [style.textDecoration]="tarea.completada ? 'line-through' : 'none'" style="flex: 1;">
+        {{ tarea.titulo }}
+      </span>
+      <button (click)="eliminarTarea(tarea.id)" style="background: none; border: none; cursor: pointer; font-size: 18px;">🗑️</button>
+    </li>
+  </ul>
+
+  <!-- Contador -->
+  <div style="margin-top: 20px; padding: 10px; background-color: #f0f2f5; border-radius: 5px; text-align: center;">
+    Total tareas: {{ tareas.length }}
+  </div>
+</div>

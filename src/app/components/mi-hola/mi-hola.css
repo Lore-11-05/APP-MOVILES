@@ -1,0 +1,89 @@
+/* Fondo de toda la página */
+.fondo-pagina {
+  background-color: #e9ecef;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Contenedor que centra el formulario */
+.contenedor-centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+/* Tarjeta blanca del formulario */
+.tarjeta-formulario {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  width: 450px;
+  margin: 20px;
+}
+
+/* Título del formulario */
+.titulo-formulario {
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+/* Contenedor de cada campo */
+.campo {
+  margin-bottom: 20px;
+}
+
+/* Etiquetas de los campos */
+.campo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Campos de entrada (input) */
+.campo input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Último campo (más espacio antes del botón) */
+.campo:last-of-type {
+  margin-bottom: 25px;
+}
+
+/* Botón Aceptar */
+.boton-aceptar {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Efecto hover del botón */
+.boton-aceptar:hover {
+  background-color: #0056b3;
+}
+.datos-mostrados {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 6px;
+  color: #333;
+  font-size: 14px;
+}
