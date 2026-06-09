@@ -1,0 +1,27 @@
+.contador-info {
+  margin-top: 15px;
+  padding: 8px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+.contador-info {
+  margin-top: 15px;
+  padding: 8px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}

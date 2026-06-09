@@ -1,0 +1,33 @@
+<div class="fondo-pagina">
+  <div class="contenedor-centrado">
+    <div class="tarjeta-formulario">
+      
+      <h3 class="titulo-formulario">Formulario de Mi Hola</h3>
+      
+      <div class="campo">
+        <label>Ingresa un nombre:</label>
+        <input type="text" [(ngModel)]="nombre" placeholder="Escribe tu nombre">
+      </div>
+
+      <div class="campo">
+        <label>Correo electrónico:</label>
+        <input type="email" [(ngModel)]="email" placeholder="ejemplo@correo.com">
+      </div>
+
+      <div class="campo">
+        <label>Teléfono:</label>
+        <input type="tel" [(ngModel)]="telefono" placeholder="Opcional">
+      </div>
+
+      <button class="boton-aceptar" (click)="aceptar()">
+        Aceptar
+      </button>
+
+      
+      <div class="datos-mostrados">
+        {{ nombre }}
+      </div>
+
+    </div>
+  </div>
+</div>
