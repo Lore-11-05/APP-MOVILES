@@ -8,6 +8,4 @@ import { HomePage } from './pages/home/home.page';
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
-export class App {
-  title = 'previoionic';
-}
+export class App {}

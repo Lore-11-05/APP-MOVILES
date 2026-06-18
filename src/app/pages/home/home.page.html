@@ -1,21 +1,29 @@
-<div style="max-width: 500px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif;">
-  <h1 style="text-align: center; color: #333;">Mi lista</h1>
+<div style="max-width: 500px; margin: 0 auto; padding: 20px;">
+  <h1 style="text-align: center; color: #333; margin-bottom: 20px;">To Do List</h1>
+
+  <div *ngIf="mensajeError" style="background-color: #ffebee; color: #c62828; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+    {{ mensajeError }}
+  </div>
 
   <div style="display: flex; gap: 10px; margin-bottom: 20px;">
     <input 
       type="text"
       [(ngModel)]="task"
       placeholder="Ingresa una tarea..."
-      style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">
-    <button (click)="addTask()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
-      + Agregar
+      style="flex: 1; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px;">
+    <button (click)="addTask()" style="padding: 12px 20px; background-color: #1976d2; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 16px; display: flex; align-items: center; gap: 8px;">
+      ➕ Agregar
     </button>
   </div>
 
   <ul style="list-style: none; padding: 0;">
-    <li *ngFor="let tarea of tareas" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; border-bottom: 1px solid #eee;">
-      <span>{{ tarea }}</span>
-      <button (click)="eliminarTarea(tarea)" style="background: none; border: none; cursor: pointer; color: #ff4444; font-size: 18px;">🗑️</button>
+    <li *ngFor="let tarea of tareas; let i = index" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background-color: white; border-radius: 8px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <span style="flex: 1; font-size: 16px;">{{ tarea }}</span>
+      <button (click)="deleteTask(i)" style="background: none; border: none; cursor: pointer; color: #d32f2f; font-size: 18px;">🗑️</button>
     </li>
   </ul>
+
+  <div style="margin-top: 20px; padding: 12px; background-color: white; border-radius: 8px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+    Total tareas: {{ tareas.length }}
+  </div>
 </div>
